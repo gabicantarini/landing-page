@@ -1,5 +1,10 @@
+/****** TAG SELECTORS ******/
 body {
     background-color: #EAF6F6;
+}
+
+h1, h2, h3 {    
+    color: #66BFBF;
 }
 
 hr {
@@ -11,6 +16,15 @@ hr {
     border-radius: 0;
 }
 
-h1, h2, h3 {    
-    color: #66BFBF;
+/****** ID SELECTORS (Unique) ******/
+#titleName {
+    color: lightcoral;
 }
+
+/****** CLASS SELECTORS (for group) ******/
+.photoHeader {
+    border-radius: 100%;
+}
+
+
+
