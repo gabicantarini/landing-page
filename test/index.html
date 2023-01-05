@@ -1,0 +1,35 @@
+<body>
+    <main>
+      <form onsubmit="calcular(event)" class="container">
+        <div class="title">Calculadora de IMC</div>
+        <div class="input">
+          <label>Nome:</label>
+          <input
+            type="text"
+            id="nome"
+          >
+        </div>
+        <div class="input">
+          <label>Altura:</label>
+          <input
+            type="number"
+            id="altura"
+          >
+        </div>
+        <div class="input">
+          <label>Peso:</label>
+          <input
+            type="number"
+            id="peso"
+          >
+        </div>
+        <input
+          class="button"
+          type="submit"
+          value="Calcular"
+        >
+          <div id="text-result" class="result" id="resultado"></div>
+      </form>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
