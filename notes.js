@@ -44,7 +44,7 @@ alert("These are the results of the calculations by Dr. Love: "
 )
 
 
-//bmi calculator
+//bmi calculator function
 function bmiCalculator(weight, height) {
     var bmi = Math.floor(weight / Math.pow(height, 2));
 
