@@ -1,11 +1,10 @@
 body {
     margin: 0;
+    text-align: center;
 }
 
 h1 {
     margin-top: 0;
-    color:grey;
-    text-align: center;
 }
 
 p {    
@@ -13,8 +12,20 @@ p {
     text-align: center;
 }
 
-div {
+.top-container {
     background-color: #E4F9F5;
-    margin: 0;
+    position: relative;
+    padding-top: 100px;
 }
 
+.topCloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+
+.bottomCloud {
+    position: absolute;  
+    left: 300px;
+    bottom: 300px;  
+}
