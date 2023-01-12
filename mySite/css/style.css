@@ -27,7 +27,7 @@ h3 {
 
 p {    
     color:grey;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 a {
@@ -48,7 +48,7 @@ a {
     position: absolute;
     right: 300px;
     top: 50px;
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
 .bottomCloud {
     position: absolute;  
