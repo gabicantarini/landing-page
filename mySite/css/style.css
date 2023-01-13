@@ -38,6 +38,10 @@ a {
     text-decoration: underline;
 }
 
+.profilePhoto {
+    border-radius: 50%;
+}
+
 .top-container {
     background-color: #E4F9F5;
     position: relative;
