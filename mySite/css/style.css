@@ -38,7 +38,7 @@ a {
     text-decoration: underline;
 }
 
-.profilePhoto {
+.profile-photo {
     border-radius: 50%;
 }
 
@@ -48,13 +48,13 @@ a {
     padding-top: 100px;
 }
 
-.topCloud {
+.top-cloud {
     position: absolute;
     right: 300px;
     top: 50px;
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
-.bottomCloud {
+.bottom-cloud {
     position: absolute;  
     left: 300px;
     bottom: 300px;  
@@ -64,4 +64,16 @@ a {
     width: 50%;
     margin: 100px auto 100px auto;
     text-align: left;
+}
+
+.charepoint-img {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.chilli-img {
+    width: 25%;
+    float: right;
+    margin-left: 30px;
 }
