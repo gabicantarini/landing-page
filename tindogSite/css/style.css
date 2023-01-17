@@ -13,14 +13,19 @@ body {
 
 
 h1 {
-    font-family: "Montserrat-Black" !important;
+    font-family: "Montserrat-bold" !important;
     font-weight: bold !important;
-    font-size: 3rem !important;
+    font-size: 3.5rem !important;
     line-height: 1.5 !important;
 }
 
+h3 :hover {
+    font-family: "Montserrat-Bold" !important;
+}
+
+
 .navbar{
-    padding-bottom: 4.5rem !important;
+    padding: 0 0 4.5rem !important;
 }
 
 .navbar-brand {
@@ -37,3 +42,18 @@ h1 {
     font-family: "Montserrat-Light" !important;
     font-size: 1.2rem !important;
 }
+
+.download-button {
+    margin: 5% 3% 5% 0 !important;
+}
+
+.iphone-image{
+    width: 60% !important;
+    transform: rotate(25deg) !important;
+}
+
+#features {
+    padding: 20px !important;
+    text-align: center !important;
+}
+
