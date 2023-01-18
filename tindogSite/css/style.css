@@ -57,3 +57,11 @@ h3 :hover {
     text-align: center !important;
 }
 
+.features {
+    padding: 20px !important;
+}
+
+#testimonials {
+    padding: 20px !important;
+    text-align: center !important;
+}
