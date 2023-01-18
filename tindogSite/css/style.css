@@ -20,9 +20,13 @@ h1 {
 }
 
 h3 {
-    font-family: "Montserrat-Bold" !important;
+    font-family: "Montserrat" !important;
     font-size: 2rem !important;
     font-weight: bold !important;
+}
+
+p {
+    color: #8f8f8f !important;
 }
 
 
