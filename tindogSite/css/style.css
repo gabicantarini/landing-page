@@ -57,8 +57,14 @@ h3 :hover {
     text-align: center !important;
 }
 
+.features-title {    
+    font-family: "Montserrat-Light" !important;
+    font-size: 2rem !important;
+    font-weight: bold !important;
+}
+
 .features {
-    padding: 20px !important;
+    padding: 20px !important;    
 }
 
 #testimonials {
