@@ -89,11 +89,14 @@ p {
     color: #ef8172;
 }
 
-#testimonials {
-    padding: 7% 15% !important;
+#testimonials {    
     text-align: center !important;
     background-color: #ef8172 !important;
     color: #fff !important;
+}
+
+.carousel-item {
+    padding: 7% 15% !important;
 }
 
 .testimonial-image {
