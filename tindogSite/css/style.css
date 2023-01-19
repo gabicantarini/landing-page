@@ -2,16 +2,6 @@ body {
     font-family: "Montserrat";
 }
 
-#title {
-    background-color: #ff4c68;   
-    color: #fff !important; 
-}
-
-.container-fluid {
-    padding: 3% 15% !important;
-}
-
-
 h1 {
     font-family: "Montserrat" !important;
     font-weight: bold !important;
@@ -36,6 +26,18 @@ p {
     color: #8f8f8f !important;
 }
 
+.colored-section {
+    background-color: #ff4c68;   
+}
+
+.white-section {
+    background-color: #fff   
+}
+
+.container-fluid{
+    padding: 3% 15% 7%;
+}
+
 
 .navbar{
     padding: 0 0 4.5rem !important;
@@ -56,6 +58,15 @@ p {
     font-size: 1.2rem !important;
 }
 
+#title { 
+    color: #fff !important; 
+}
+
+#title .container-fluid {
+    padding: 3% 15% 7%;
+  }
+
+
 .download-button {
     margin: 5% 3% 5% 0 !important;
     width: 25% !important;
@@ -65,19 +76,24 @@ p {
     margin-right: 5% !important;
 }
 
-.iphone-image{
-    width: 60% !important;
-    transform: rotate(25deg) !important;
+.iphone-image {
+    width: 60%;
+    transform: rotate(25deg);    
+    position: absolute;
+    right: 30%;
 }
 
-#features {
-    padding: 7% 15% !important;
-    text-align: center !important;
+#features {  
+    position: relative;
 }
 
-.features {
-    padding: 20px !important;   
-    padding: 4.5% !important; 
+.feature-title {       
+  font-size: 1.5rem; 
+}
+
+.features {         
+    text-align: center;
+    padding: 4.5%;
 }
 
 .icon {
@@ -86,12 +102,11 @@ p {
 }
 
 .icon:hover {
-    color: #ef8172;
+    color: #ff4c68;
 }
 
 #testimonials {    
     text-align: center !important;
-    background-color: #ef8172 !important;
     color: #fff !important;
 }
 
@@ -107,11 +122,19 @@ p {
 
 #press {
     text-align: center !important;
-    background-color: #ef8172 !important;
     padding-bottom: 3% !important;
 }
 
 .press-logo {
     width: 15%;
     margin: 20px 20px 15px;
+}
+
+#pricing {
+    padding: 100px;
+    text-align: center;
+}
+
+.pricing-column {
+    padding: 3% 2% !important;
 }
