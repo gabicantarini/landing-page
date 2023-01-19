@@ -53,7 +53,7 @@ p {
 
 #title .container-fluid {
     padding: 3% 15%;
-    text-align: left !important;
+    text-align: left;
 }
 
 .download-button {
@@ -133,7 +133,7 @@ p {
 
 @media (max-width: 1358px) {
 
-    #title {
+    #title .container-fluid {
         text-align: center !important;
     }
 
