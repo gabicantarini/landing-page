@@ -1,13 +1,11 @@
-.first-section {
-    padding: 20px 20px;
-}
+
 
 .topper-content {
-    
+    padding: 5% 5%;
 }
 
 .twitter-icon {   
-    margin-top: 10px;
+    margin-top: 5px;
     color:rgb(29, 155, 240);
     padding-right: 30px;
     font-size: 15px;
@@ -24,17 +22,18 @@
 }
 
 .search-icon {
-    margin-top: 10px;
+    margin: 12px 0px 5px 0px;
     position: absolute;
-    padding-left: 60px;
+    padding-left: 80px;
     color: rgb(83, 100, 113);
     pointer-events: auto;
     justify-content: center;
 }
 
 .search-text {
-    width: 50%;
+    width: 100%;
     height: 40px;
+    padding: 10px 5px 10px 50px;
     border-radius: 25px;
     border-width: 0px;
     background-color: rgb(239, 243, 244);    
