@@ -30,6 +30,10 @@
     justify-content: center;
 }
 
+.middle-content {
+    padding: 5% 5%;
+}
+
 .search-text {
     width: 100%;
     height: 40px;
