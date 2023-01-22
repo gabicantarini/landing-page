@@ -2,12 +2,37 @@
     padding: 20px 20px;
 }
 
-
-.twitter-icon {    
-    color:rgb(29, 155, 240);
+.topper-content {
+    
 }
 
-.search-input {
+.twitter-icon {   
+    margin-top: 10px;
+    color:rgb(29, 155, 240);
+    padding-right: 30px;
+    font-size: 15px;
+}
+
+.search-icon-position {
+    padding: 0px;
+    margin: 0px;
+    cursor: default;
+    position: relative;
+    display: flex;
+    z-index: 0;
+    
+}
+
+.search-icon {
+    margin-top: 10px;
+    position: absolute;
+    padding-left: 60px;
+    color: rgb(83, 100, 113);
+    pointer-events: auto;
+    justify-content: center;
+}
+
+.search-text {
     width: 50%;
     height: 40px;
     border-radius: 25px;
