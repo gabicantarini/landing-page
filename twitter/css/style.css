@@ -50,6 +50,9 @@ p {
     background-color: rgb(239, 243, 244);    
 }
 
+.second-section {
+    margin: 15px 15px 5px 50px;
+}
 
 .dots-icon {
     margin: 12px 0px 5px 0px;
