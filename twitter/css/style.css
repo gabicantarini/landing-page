@@ -70,11 +70,12 @@ p {
 }
 
 
-@media (max-width: 1358px) {
+@media (min-width: 1915px) {
 
     body {
         margin: 1% 25% 1% 25% !important; 
         padding: 15px 15px 15px 15px !important;
+        text-align: center;
     }
     
 }
