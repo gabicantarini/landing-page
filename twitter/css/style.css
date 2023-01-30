@@ -43,8 +43,7 @@ p {
   .btn-circle {
     border-radius: 50%;
     width: 40px;
-    height: 40px;
-    background-image: url(https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_normal.jpg);
+    height: 40px;    
   }
   
   .btn-search-bar {
