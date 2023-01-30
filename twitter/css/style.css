@@ -70,10 +70,11 @@ p {
 }
 
 
-@media (min-width: 890%) {
+@media (max-width: 1358px) {
 
     body {
-        margin: 0 40% 0 40% !important;   
+        margin: 1% 25% 1% 25% !important; 
+        padding: 15px 15px 15px 15px !important;
     }
     
 }
