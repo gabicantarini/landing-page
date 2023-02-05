@@ -88,12 +88,4 @@ p {
     
 }
 
-@media (min-width: 991px) {
 
-    .fixed-top {
-        margin: 1% 25% 1% 25% !important; 
-        padding: 15px 15px 15px 15px !important;
-        text-align: center;
-    }
-    
-}
