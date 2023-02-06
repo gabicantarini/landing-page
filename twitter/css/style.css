@@ -22,7 +22,7 @@ p {
 
 
 .container-fluid {
-    margin: 16% 16% 16% 16% !important;  
+    margin: 5% 16% 5% 16% !important;  
     text-align: center;
 }
 
@@ -65,6 +65,10 @@ p {
 
 .features {
     height: 90px;
+}
+
+.features-nav {
+    text-align: center;
 }
 
 .dots-icon {
