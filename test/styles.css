@@ -1,58 +1,63 @@
-.container {
-    background-color: rgb(229, 233, 233) ;
-    border: 1px solid rgb(228, 222, 222);
-    margin: 100px;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
+
+div.a {
+    text-align: center 90px;
+
 }
 
-.container div {
-    background-color: rgb(244, 244, 248);
-    padding: 20px ;
-       
+
+img{
+    border-radius: 60px;
+    margin-inline:  200px;
+    border-inline-end: 40px;
+    border-image-source: url("Qr\ mobile.png");
+
+    border: solid 10px rgb(94, 6, 116);
+    flex: content;
+    align-items: center;
+    width: 50;
+    margin-top: 70px;
+    display: flex;
+
+   
+
+}  
+ body{
+ 
+
+    background-color: rgba(43, 129, 179, 0.884);
+
+  
+ }
+button{
+    display: flex;
+    position: absolute ;
+    margin-top: 500PX;
+    color: rgb(23, 20, 220);
+    border-radius: solid rgba(83, 8, 8, 0.76);
+    border-color: rgba(42, 211, 211, 0.863);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-inline: 290px;
+    font-family: 'Franklin Gothic Medium'
+    
+    
+    
+
+    
+}
+h1{
+color: rgba(38, 5, 156, 0.911);
+
+    display: flex;
+    align-items: 90px ;
+    margin-inline: 238px;
+    position: absolute ;
+    z-index: 999;
+    margin-top: 120px;
+    font-size: 3em
+    
+  
+ 
 }
 
-#item-1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background-color: rgb(250, 248, 250);
-    color: rgb(59, 185, 158) ;
-    font-size: 1em;
-    }
     
-    
-
-#item-2 {
-    grid-column-start: 1;
-    grid-column-end: 1 ;
-    background-color: rgb(45, 158, 134);
-    color: aliceblue;
-    
-}
-
-#item-3 {
-    grid-column-start: 2;
-    grid-column-end: 2;
-    background-color: rgb(59, 185, 158);
-    color: aliceblue;
-    font-size: 0.5em;
-}
-@media screen and (max-width: 768px) {
-    #item-1 {
-        grid-column-start: 1;
-        grid-column-end: 1;
-               }
-               
-        #item-2 {
-        grid-column-start: 1;
-        grid-column-end: 1 ;
-      }
-    
-    #item-3 {
-        grid-column-start: 1;
-        grid-column-end: 1;
-    
-}
-}

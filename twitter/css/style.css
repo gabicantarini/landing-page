@@ -66,6 +66,7 @@ p {
 
 .features {
     height: 90px;
+    margin: 5px 5px 15px 5px;
 }
 
 .features-nav {
@@ -78,8 +79,7 @@ p {
     /*right: 5%;
     top: 43%;*/
     color: rgb(83, 100, 113);
-    z-index: 1;
-  
+    z-index: 1;  
 }
 
 
