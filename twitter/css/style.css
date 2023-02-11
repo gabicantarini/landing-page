@@ -18,6 +18,8 @@ p {
 @media screen and (min-width: 1236px) {
     .container {
       width: 1190px;
+      border-left-color: aqua;
+      border-right-color: aqua;
     }
   }
 
