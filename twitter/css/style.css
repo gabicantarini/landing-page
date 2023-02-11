@@ -72,12 +72,9 @@ p {
 
 .features-nav {
     text-align: center;
-    border: solid;
-    border-left-color: aqua;
-    border-right-color: aqua;
-    border-top: white;
-    border-bottom: white;
-
+    border: solid thin;
+    border-color: white lightblue white lightblue;
+   
 }
 
 .dots-icon {
