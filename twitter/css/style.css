@@ -18,12 +18,11 @@ p {
 @media screen and (min-width: 1236px) {
     .container {
       width: 1190px;
-      border-left-color: aqua;
-      border-right-color: aqua;
+      
     }
   }
 
-
+  
 .container-fluid {
     margin: 5% 16% 5% 16% !important;  
     text-align: center;
@@ -73,6 +72,12 @@ p {
 
 .features-nav {
     text-align: center;
+    border: solid;
+    border-left-color: aqua;
+    border-right-color: aqua;
+    border-top: white;
+    border-bottom: white;
+
 }
 
 .dots-icon {
