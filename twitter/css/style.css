@@ -8,20 +8,11 @@ h2, h5 {
     font-weight: bold !important;
 }
 
-
 p {
     margin: 0px 0px !important;
     font-size: 12px;  
     color: rgb(83, 100, 113);  
 }
-
-@media screen and (min-width: 1236px) {
-    .container {
-      width: 1190px;
-      
-    }
-  }
-
   
 .container-fluid {
     margin: 5% 16% 5% 16% !important;  
@@ -38,7 +29,7 @@ p {
 .twitter-icon-top {   
     margin-top: 5px;
     color:rgb(29, 155, 240);
-    padding-right: 35px;
+    padding-left: 55px;
     font-size: 15px;
     position: absolute;
     z-index: -1;
@@ -54,9 +45,9 @@ p {
 }
 
 .search-icon {
-    margin: 20px 0px 5px 0px;
+    margin: 12px 0px 5px 0px;
     position: absolute;
-    padding-left: 50px;
+    padding-left: 15px;
     color: rgb(83, 100, 113);
     pointer-events: auto;   
 }
@@ -64,10 +55,14 @@ p {
 .search-text  {
     width: 70%;
     height: 40px;
-    padding: 10px 5px 10px 50px;
+    padding: 10px 5px 10px 50px;    
     border-radius: 25px;
     border-width: 0px;
     background-color: rgb(239, 243, 244);    
+}
+
+.config-icon {
+    margin-left: 10px;
 }
 
 .second-section {
@@ -75,19 +70,21 @@ p {
 }
 
 .features {
-    height: 90px;
-    margin: 5px 5px 15px 5px;
+    margin: 5px 5px 15px 15px;
 }
 
 .features-nav {
-    text-align: center;
+    margin-right: 55px;
     border: solid thin;
     border-color: white lightblue white lightblue;
-   
+}
+
+.input-form {
+    margin: 0px 0px 10px 15px;
 }
 
 .dots-icon {
-    margin: 12px 0px 5px 100px;
+    margin: 12px 0px 5px 500px;
     position: absolute;
     /*right: 5%;
     top: 43%;*/
@@ -104,6 +101,13 @@ p {
         text-align: center;
     }
     
+}
+
+@media screen and (min-width: 1236px) {
+    .container {
+      width: 1190px;
+      
+    }
 }
 
 
