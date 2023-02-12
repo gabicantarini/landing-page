@@ -28,18 +28,20 @@ p {
     text-align: center;
 }
 
-.twitter-icon {   
+/*.twitter-icon {   
     margin-top: 5px;
     color:rgb(29, 155, 240);
-    padding-right: 35px;
+    padding-left: 55px;
     font-size: 15px;
-}
+}*/
 
 .twitter-icon-top {   
     margin-top: 5px;
     color:rgb(29, 155, 240);
     padding-right: 35px;
     font-size: 15px;
+    position: absolute;
+    z-index: -1;
 }
 
 .search-icon-position {
