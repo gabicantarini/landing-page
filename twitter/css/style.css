@@ -1,7 +1,7 @@
 
 body {     
     background-color: #e6ecf0;
-    padding-top: 54px;
+    padding-top: 5px;
 }
 
 h2, h5 {
@@ -32,7 +32,7 @@ p {
     padding-left: 55px;
     font-size: 15px;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 }
 
 .search-icon-position {
@@ -80,11 +80,15 @@ p {
 }
 
 .input-form {
+
+
+
+
     margin: 0px 0px 10px 15px;
 }
 
 .dots-icon {
-    margin: 12px 0px 5px 500px;
+    margin: 0px 0px 15px 500px;
     position: absolute;
     /*right: 5%;
     top: 43%;*/
