@@ -80,10 +80,6 @@ p {
 }
 
 .input-form {
-
-
-
-
     margin: 0px 0px 10px 15px;
 }
 
@@ -94,6 +90,17 @@ p {
     top: 43%;*/
     color: rgb(83, 100, 113);
     z-index: 1;  
+}
+
+.navbar-end {
+    text-align: right;
+    align-self: flex-end;
+    margin-top: 5px;
+    color:rgb(29, 155, 240);
+    padding-left: 55px;
+    font-size: 15px;
+    position: absolute;
+    z-index: 1;
 }
 
 
