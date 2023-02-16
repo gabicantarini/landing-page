@@ -93,11 +93,9 @@ p {
 }
 
 .navbar-end {
-    text-align: right;
     align-self: flex-end;
-    margin-top: 5px;
+    margin: 5px 700px;
     color:rgb(29, 155, 240);
-    padding-left: 55px;
     font-size: 15px;
     position: absolute;
     z-index: 1;
