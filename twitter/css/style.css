@@ -27,10 +27,10 @@ p {
 }*/
 
 .twitter-icon-top {   
-    margin-top: 5px;
-    color:rgb(29, 155, 240);
-    padding-left: 55px;
-    font-size: 15px;
+    /*margin-top: 5px;*/
+    color:rgb(29, 155, 240) !important;
+    /*padding-left: 55px;*/
+    font-size: 15px !important;
     position: absolute;
     z-index: 1;
 }
@@ -74,6 +74,7 @@ p {
 }
 
 .features-nav {
+    width: 80px;
     margin-right: 55px;
     border: solid thin;
     border-color: white lightblue white lightblue;
