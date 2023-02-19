@@ -29,8 +29,8 @@ p {
 .twitter-icon-top {   
     /*margin-top: 5px;*/
     color:rgb(29, 155, 240) !important;
-    /*padding-left: 55px;*/
-    font-size: 15px !important;
+    /*padding-left: 55px;
+    font-size: 15px !important;*/
     position: absolute;
     z-index: 1;
 }
