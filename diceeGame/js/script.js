@@ -16,3 +16,12 @@ var rightDiceeImage = document.getElementsByClassName("img2")[0];
 rightDiceeImage.setAttribute("src", rightDiceeImages); 
 
 
+if (randomNumber1 > randomNumber2) {
+    document.querySelector("h1").innerHTML = "🚩 Play 1 Wins!";
+}
+else if (randomNumber1 < randomNumber2) {
+    document.querySelector("h1").innerHTML = "🚩 Play 2 Wins! ";
+}
+else {
+    document.querySelector("h1").innerHTML = " Draw! ";
+}
