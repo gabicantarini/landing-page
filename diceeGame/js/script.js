@@ -1,19 +1,18 @@
-var randomNumber1 = Math.random();
-randomNumber1 = randomNumber1 * 6;
-randomNumber1 = Math.floor(randomNumber1) + 1;
+var randomNumber1 = Math.floor((Math.random() * 6)) + 1;
 
-var diceeImages = Math.random();
-diceeImages = ["./images/dice1.png","./images/dice2.png", "./images/dice3.png", "./images/dice4.png", 
-"./images/dice5.png", "./images/dice6.png"];
-diceeImages = diceeImages * 6;
+var diceeImages = "dice" + randomNumber1 + ".png";
 
+var imageSource = "images/" + diceeImages;
 
-
-function leftDiceeImage() {
-    
-        var diceeImg = document.getElementsByClassName("img1");
-        diceeImg.setAttribute("src","./images/dice2.png");   
+var diceeImg = document.getElementsByClassName("img1")[0];
+diceeImg.setAttribute("src", imageSource);   
     
    
-}
+var randomNumber2 = Math.floor((Math.random() * 6)) + 1;
+
+var rightDiceeImages = "images/dice" + randomNumber2 + ".png";
+
+var rightDiceeImage = document.getElementsByClassName("img2")[0];
+rightDiceeImage.setAttribute("src", rightDiceeImages); 
+
 
