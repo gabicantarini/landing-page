@@ -19,6 +19,8 @@ function winner2() {
 
 }
 
+    //next time: set image change to inner.html result
+
     if (randomNumber1 > randomNumber2) {
         document.querySelector("h1").innerHTML = "🚩 Play 1 Wins!";
     }
