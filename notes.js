@@ -95,6 +95,20 @@ function fizzBuzzy() {
 }
 
 
+// FizzBuzz with for
+var output = [];
+
+function fizzBuzzy() {
+    for(var count = 1; count <= 100; count++) {
+        let fizz = count % 3 === 0;
+        let buzz = count % 5 === 0;
+        let fizzBuzz = fizz & buzz ? output.push("FizzBuzz") : fizz ? output.push("Fizz") : buzz ? output.push("Buzz") : output.push(count);
+        count ++;
+    }
+    console.log(output);
+}
+
+
 
 // While loop to check a state
 var output = [];
@@ -118,5 +132,7 @@ function beer() {
 for(var i = 1; i < 2; i++) {
     console.log(i);
 }
+
+
 
 
