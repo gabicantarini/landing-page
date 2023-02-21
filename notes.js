@@ -68,5 +68,14 @@ var name = prompt("What is your name? ");
 let inviter = alert(guestList.includes(name) ? "Seja bem vindo!" : "Você não está na lista de convidados.");
 
 
+let numbers = Math.random();
+let numbersToHundred = numbers * 100;
+let floorNumbers = Math.floor(numbersToHundred) + 1;
+let fizz = floorNumbers % 3 === 0;
+let buzz = floorNumbers % 5 === 0;
+let fizzBuzz = fizz & buzz ? "FizzBuzz" : fizz ? "Fizz" : buzz ? "Buzz" : floorNumbers;
+console.log(fizzBuzz);
+
+
 
 
