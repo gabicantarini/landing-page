@@ -96,4 +96,27 @@ function fizzBuzzy() {
 
 
 
+// While loop to check a state
+var output = [];
+var count = 100;
+
+function beer() {
+    while(count >=1) {
+        let song =  count + " bottles of beer on the wall, " +  count + "bottles of beer. Take 1 down, "
+        + count-- + "bottles of beer on the wall." + "\n";
+
+        let beerSong =  song ? output.push(song) : 
+        output.push("No more bottles of beer on the wall,no more bottles of beer. Go to the store and buy some more, "
+        + count + " botlles of beer on the wall.");
+    }
+
+    console.log(output + "No more botlles of beer on the wall, no more botlees of beer. Go to the store and buy some more, 99 botlles of beer on the wall.");
+}
+
+
+// Foor loop iterate items
+for(var i = 1; i < 2; i++) {
+    console.log(i);
+}
+
 
