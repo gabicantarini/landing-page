@@ -53,3 +53,8 @@ function bmiCalculator(weight, height) {
     }
 }
 bmiCalculator(100, 1);
+
+
+let leapYear = (year) => year % 4 === 0 && year % 100 !== 0 || year % 400 === 0 ? "Leap year." : "Not leap year";
+leapYear(1998);
+
