@@ -59,15 +59,18 @@ let leapYear = (year) => year % 4 === 0 && year % 100 !== 0 || year % 400 === 0 
 leapYear(1998);
 
 
+// What is z value
 let z = 1 + + "2" + "2";
 console.log(z);
 
 
+// Select welcome inviter
 var guestList = ["Angela", "Paulo", "Daniel", "Pedro", "Sarah", "Cecília"];
 var name = prompt("What is your name? ");
 let inviter = alert(guestList.includes(name) ? "Seja bem vindo!" : "Você não está na lista de convidados.");
 
 
+// FizzBuzz with Random
 let numbers = Math.random();
 let numbersToHundred = numbers * 100;
 let floorNumbers = Math.floor(numbersToHundred) + 1;
@@ -75,6 +78,21 @@ let fizz = floorNumbers % 3 === 0;
 let buzz = floorNumbers % 5 === 0;
 let fizzBuzz = fizz & buzz ? "FizzBuzz" : fizz ? "Fizz" : buzz ? "Buzz" : floorNumbers;
 console.log(fizzBuzz);
+
+
+// FizzBuzz with While
+var output = [];
+var count = 1 ;
+
+function fizzBuzzy() {
+    while(count <= 100) {
+        let fizz = count % 3 === 0;
+        let buzz = count % 5 === 0;
+        let fizzBuzz = fizz & buzz ? output.push("FizzBuzz") : fizz ? output.push("Fizz") : buzz ? output.push("Buzz") : output.push(count);
+        count ++;
+    }
+    console.log(output);
+}
 
 
 
