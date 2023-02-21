@@ -58,3 +58,15 @@ bmiCalculator(100, 1);
 let leapYear = (year) => year % 4 === 0 && year % 100 !== 0 || year % 400 === 0 ? "Leap year." : "Not leap year";
 leapYear(1998);
 
+
+let z = 1 + + "2" + "2";
+console.log(z);
+
+
+var guestList = ["Angela", "Paulo", "Daniel", "Pedro", "Sarah", "Cecília"];
+var name = prompt("What is your name? ");
+let inviter = alert(guestList.includes(name) ? "Seja bem vindo!" : "Você não está na lista de convidados.");
+
+
+
+
