@@ -8,6 +8,7 @@ function lifeInWeeks(age) {
 }
 lifeInWeeks(15);
 
+
 function yearsTogether(year, birthYear) {
     var totalYears = year - birthYear;
     var totalYearsMonth = totalYears * 12;
@@ -16,7 +17,6 @@ function yearsTogether(year, birthYear) {
 
     console.log(totalYears + " and " + totalYearsMonth + " and " + totalYearsDays + " and " + totalYearsHour)
 }
-
 yearsTogether(2023, 1983);
 
 
@@ -25,6 +25,18 @@ function bmiCalculator(weight, height) {
 
     console.log(bmi);
 }
-
 bmiCalculator(65, 18);
+
+
+var name1 = prompt("Escreva teu primeiro e último nome: ");
+var name2 = prompt("Escreva teu primeiro e último nome: ");
+var calculateLove = Math.random();
+calculateLove =  calculateLove * 100;
+calculateLove = Math.floor(calculateLove) + 1;
+console.log(calculateLove);
+alert("These are the results of the calculations by Dr. Love: "
+    + name1 + " ❤️ " + name2 + " "
+    + calculateLove + " % "
+)
+
 
