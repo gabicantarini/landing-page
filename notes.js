@@ -172,6 +172,30 @@ function HouseKeeper (yearsOfExperience, name, age, cleaningRepertoire) {
     this.cleaningRepertoire = cleaningRepertoire;   
     
 }
-
-//to create a new HouseKeeper 
+//to create a new HouseKeeper in the object construction
 var HouseKeeper1 = new HouseKeeper (7, "Ana", 36, ["bedroom", "room", "bethroom"]);
+
+
+//Methods = it is a function associated to an object
+function moveSuitcase() {
+    alert ("May I take your suitcase? ");
+    pickUpSuitcase();
+    move();
+}
+
+function cleaning() {
+    alert("cleaning in progress!");
+}
+
+
+// object construction + methods
+function HouseKeeper (yearsOfExperience, name, age, cleaningRepertoire) {        
+    this.yearsOfExperience = yearsOfExperience;
+    this.name = name;
+    this.age = age;
+    this.cleaningRepertoire = cleaningRepertoire;
+    this.cleaning = function() {
+         alert("cleaning in progress!");
+    };
+    
+}
