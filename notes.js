@@ -138,14 +138,22 @@ for(var i = 1; i < 2; i++) {
     console.log(i);
 }
 
-//invok other function
 
+//Calculator
 function add(num1, num2) {
-    return num1, num2;
+    return num1 + num2;
+}
+
+function subtraction(num1, num2) {
+    return num1 - num2;
 }
 
 function multiply(num1, num2) {
     return num1 * num2;
+}
+
+function division(num1, num2) {
+    return num1 / num2;
 }
 
 function calculator(num1, num2, operator) {
