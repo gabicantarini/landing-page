@@ -138,6 +138,18 @@ for(var i = 1; i < 2; i++) {
     console.log(i);
 }
 
+//invok other function
 
+function add(num1, num2) {
+    return num1, num2;
+}
 
+function multiply(num1, num2) {
+    return num1 * num2;
+}
 
+function calculator(num1, num2, operator) {
+    return operator(num1, num2);
+}
+calculator(4,5,add); //9
+calculator(4,5,multiply); //20
