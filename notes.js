@@ -200,3 +200,10 @@ function HouseKeeper (yearsOfExperience, name, age, cleaningRepertoire) {
     };
     
 }
+
+
+//callback functions
+document.addEventListener("keydown", respondToKey(event));
+function respondToKey(event){
+    console.log("key pressed.");
+}

@@ -7,11 +7,13 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
         //verify mouse click
         var buttonInnerHTML = this.innerHTML;
         playSounds(buttonInnerHTML);
+        buttonAnimation(buttonInnerHTML);
     });
 }
 //verify keyboard press
 document.addEventListener("keydown", function (event) {
     playSounds(event.key)
+    buttonAnimation(event.key);
 })
 
 //function to catch key and switch to sound
@@ -56,7 +58,14 @@ function playSounds(key) {
     }
 }
 
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey);
+    activeButton.classList.add("pressed");
+    setTimeout(function(){
+        activeButton.classList.remove("pressed");
+    }, 100);
 
+}
 
 
 
