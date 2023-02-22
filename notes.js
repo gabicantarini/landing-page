@@ -161,3 +161,17 @@ function calculator(num1, num2, operator) {
 }
 calculator(4,5,add); //9
 calculator(4,5,multiply); //20
+
+
+//object construction function
+function HouseKeeper (yearsOfExperience, name, age, cleaningRepertoire) {
+        
+    this.yearsOfExperience = yearsOfExperience;
+    this.name = name;
+    this.age = age;
+    this.cleaningRepertoire = cleaningRepertoire;   
+    
+}
+
+//to create a new HouseKeeper 
+var HouseKeeper1 = new HouseKeeper (7, "Ana", 36, ["bedroom", "room", "bethroom"]);
