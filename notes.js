@@ -1,3 +1,5 @@
+
+// count life in weeks
 function lifeInWeeks(age) {
     var yearsRemaning = 90 * age;
     var days = yearsRemaning * 365;
@@ -8,7 +10,7 @@ function lifeInWeeks(age) {
 }
 lifeInWeeks(15);
 
-
+// calculate years together
 function yearsTogether(year, birthYear) {
     var totalYears = year - birthYear;
     var totalYearsMonth = totalYears * 12;
@@ -20,6 +22,7 @@ function yearsTogether(year, birthYear) {
 yearsTogether(2023, 1983);
 
 
+//bmi calculator
 function bmiCalculator(weight, height) {
     var bmi = Math.floor(weight / Math.pow(height, 2));
 
@@ -28,6 +31,7 @@ function bmiCalculator(weight, height) {
 bmiCalculator(65, 18);
 
 
+//love rate
 var name1 = prompt("Escreva teu primeiro e último nome: ");
 var name2 = prompt("Escreva teu primeiro e último nome: ");
 var calculateLove = Math.random();
@@ -40,7 +44,7 @@ alert("These are the results of the calculations by Dr. Love: "
 )
 
 
-
+//bmi calculator
 function bmiCalculator(weight, height) {
     var bmi = Math.floor(weight / Math.pow(height, 2));
 
@@ -55,6 +59,7 @@ function bmiCalculator(weight, height) {
 bmiCalculator(100, 1);
 
 
+//leap year function
 let leapYear = (year) => year % 4 === 0 && year % 100 !== 0 || year % 400 === 0 ? "Leap year." : "Not leap year";
 leapYear(1998);
 
