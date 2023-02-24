@@ -1,8 +1,8 @@
 
 var buttonCollors = ["red", "blue", "green", "yellow"];
-var gamePattern = [];
-var userClickedPattern = [];
 
+
+var userClickedPattern = [];
 $(".btn").click(function() {
 
     var userChosenColour = $(this).attr("id");
@@ -13,7 +13,7 @@ $(".btn").click(function() {
   
 });
 
-
+var gamePattern = [];
 function nextSequence() {
     var randomNumber = Math.floor((Math.random() * 4));
     var randomChosenColour = buttonCollors[randomNumber];
@@ -35,13 +35,16 @@ function playSound(name) {
           
 }
 
+
 function animatePress(currentColour) {
     
-    $("pressed").click(function(){
-        //$(this).attr("pressed");
-        setTimeout(function(){
-            currentColour.classList.remove("pressed");
-        },100)
-    })
+    $('#' + currentColour).addClass("pressed");
+    
+    setTimeout(function(){
+        $('#' + currentColour).removeClass(["pressed"]);
+    },100)
+    
 }
+
+
 
