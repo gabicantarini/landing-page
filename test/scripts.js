@@ -1,150 +1,129 @@
-const resultadoPessoa = document.querySelector("#result-person");
-const resultadoTotal = document.querySelector("#result-Total");
 
-const button = document.querySelector("#button5")
-const button10 = document.querySelector("#button10")
-const button15 = document.querySelector("#button15")
-const button25 = document.querySelector("#button25")
-const button50 = document.querySelector("#button50")
-const buttoncust = document.querySelector("#costum")
-function calcularGorjeta5(){
-    const bill = document.querySelector("#bill");
-    const people = document.querySelector("#people");
-   
-    
-     if (bill.value !=="" && people.value !==""){
-         
-        valorGorjetaPessoa = ( (bill.value/100) * 5)/people.value
-        valortotalPessoa= (bill.value/people.value) +  valorGorjetaPessoa
 
-         resultadoPessoa.innerHTML=`\$ ${valorGorjetaPessoa.toFixed(2)}`;
-         resultadoTotal.innerHTML= `\$ ${valortotalPessoa.toFixed(2)}`;
-         console.log(bill.value)
-         
-     } else{
-         alert("Preencha todos os campos")
-          }
-     }
- 
- button.addEventListener('click', () => {
-     calcularGorjeta5();
-     
- })
- function calcularGorjeta10(){
-    const bill = document.querySelector("#bill");
-    const people = document.querySelector("#people");
-   
-    
-     if (bill.value !=="" && people.value !==""){
-         
-         valorGorjetaPessoa = ( (bill.value/100) * 10)/people.value
-        valortotalPessoa= (bill.value/people.value) +  valorGorjetaPessoa
+window.addEventListener('DOMContentLoaded', () => {
+    // everything goes here
+  });
 
-        resultadoPessoa.innerHTML=`\$ ${valorGorjetaPessoa.toFixed(2)}`;
-         resultadoTotal.innerHTML= `\$ ${valortotalPessoa.toFixed(2)}`;
-         console.log(bill.value)
-         
-     } else{
-         alert("Preencha todos os campos")
-            }
-     }
- 
- button10.addEventListener('click', () => {
-     calcularGorjeta10();
-     
- })
+const tiles = Array.from(document.querySelectorAll('.tile'));
+const playerDisplay = document.querySelector('.display-player');
+const resetButton = document.querySelector('#reset');
+const announcer = document.querySelector('.announcer');
 
- function calcularGorjeta15(){
-    const bill = document.querySelector("#bill");
-    const people = document.querySelector("#people");
-   
-    
-     if (bill.value !=="" && people.value !==""){
-         
-         valorGorjetaPessoa = ( (bill.value/100) * 15)/people.value
-        valortotalPessoa= (bill.value/people.value) +  valorGorjetaPessoa
+let board = ['', '', '', '', '', '', '', '', ''];
+let currentPlayer = 'X';
+let isGameActive = true;
 
-        resultadoPessoa.innerHTML=`\$ ${valorGorjetaPessoa.toFixed(2)}`;
-        resultadoTotal.innerHTML= `\$ ${valortotalPessoa.toFixed(2)}`;
-         console.log(bill.value)
-         
-         
-     } else{
-         alert("Preencha todos os campos")
-            }
-     }
- 
- button15.addEventListener('click', () => {
-     calcularGorjeta15();
-     
- })
- function calcularGorjeta25(){
-    const bill = document.querySelector("#bill");
-    const people = document.querySelector("#people");
-   
-    
-     if (bill.value !=="" && people.value !==""){
-         
-         valorGorjetaPessoa = ( (bill.value/100) * 25)/people.value
-        valortotalPessoa= (bill.value/people.value) +  valorGorjetaPessoa
+const PLAYERX_WON = 'PLAYERX_WON';
+const PLAYERO_WON = 'PLAYERO_WON';
+const TIE = 'TIE';
 
-        resultadoPessoa.innerHTML=`\$ ${valorGorjetaPessoa.toFixed(2)}`;
-        resultadoTotal.innerHTML= `\$ ${valortotalPessoa.toFixed(2)}`;
-         console.log(bill.value)
-         
-     } else{
-         alert("Preencha todos os campos")
-            }
-     }
- 
- button25.addEventListener('click', () => {
-     calcularGorjeta25();
-     
- })
- function calcularGorjeta50(){
-    const bill = document.querySelector("#bill");
-    const people = document.querySelector("#people");
-   
-    
-     if (bill.value !=="" && people.value !==""){
-         
-         valorGorjetaPessoa = ( (bill.value/100) * 50)/people.value
-        valortotalPessoa= (bill.value/people.value) +  valorGorjetaPessoa
+/*
+   Indexes within the board
+   [0] [1] [2]
+   [3] [4] [5]
+   [6] [7] [8]
+*/
 
-        resultadoPessoa.innerHTML=`\$ ${valorGorjetaPessoa.toFixed(2)}`;
-        resultadoTotal.innerHTML= `\$ ${valortotalPessoa.toFixed(2)}`;
-         console.log(bill.value)
-         
-     } else{
-         alert("Preencha todos os campos")
-            }
-     }
- 
- button50.addEventListener('click', () => {
-     calcularGorjeta50();
-     
- })
+const winningConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+ ];
 
- function calcularGorjetacust(){
-    const bill = document.querySelector("#bill");
-    const people = document.querySelector("#people");
-   
-    
-     if (bill.value !=="" && people.value !==""){
-         
-         valorGorjetaPessoa = ( (bill.value/100) * buttoncust.value)/people.value
-        valortotalPessoa= (bill.value/people.value) +  valorGorjetaPessoa
 
-        resultadoPessoa.innerHTML=`\$ ${valorGorjetaPessoa.toFixed(2)}`;
-         resultadoTotal.innerHTML= `\$ ${valortotalPessoa.toFixed(2)}`;
-         console.log(bill.value)
-         
-     } else{
-         alert("Preencha todos os campos")
-            }
-     }
- 
-     buttoncust.addEventListener('click', () => {
-     calcularGorjetacust();
-     
- })
+ const isValidAction = (tile) => {
+    if (tile.innerText === 'X' || tile.innerText === 'O'){
+        return false;
+    }
+
+    return true;
+};
+
+const updateBoard =  (index) => {
+    board[index] = currentPlayer;
+ }
+
+
+ const changePlayer = () => {
+    playerDisplay.classList.remove(`player${currentPlayer}`);
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    playerDisplay.innerText = currentPlayer;
+    playerDisplay.classList.add(`player${currentPlayer}`);
+}
+
+const announce = (type) => {
+    switch(type){
+       case PLAYERO_WON:
+            announcer.innerHTML = 'Player <span class="playerO">O</span> Won';
+            break;
+       case PLAYERX_WON:
+            announcer.innerHTML = 'Player <span class="playerX">X</span> Won';
+            break;
+       case TIE:
+            announcer.innerText = 'Tie';
+        }
+    announcer.classList.remove('hide');
+};
+
+
+function handleResultValidation() {
+    let roundWon = false;
+    for (let i = 0; i <= 7; i++) {
+      const winCondition = winningConditions[i];
+      const a = board[winCondition[0]];
+      const b = board[winCondition[1]];
+      const c = board[winCondition[2]];
+      if (a === "" || b === "" || c === "") {
+        continue;
+      }
+      if (a === b && b === c) {
+        roundWon = true;
+        break;
+      }
+    }
+  
+    if (roundWon) {
+      announce(currentPlayer === "X" ? PLAYERX_WON : PLAYERO_WON);
+      isGameActive = false;
+      return;
+    }
+  
+    if (!board.includes("")) announce(TIE);
+  }
+
+  const userAction = (tile, index) => {
+    if (isValidAction(tile) && isGameActive) {
+      tile.innerText = currentPlayer;
+      tile.classList.add(`player${currentPlayer}`);
+      updateBoard(index);
+      handleResultValidation();
+      changePlayer();
+    }
+  };
+
+  tiles.forEach( (tile, index) => {
+    tile.addEventListener('click', () => userAction(tile, index));
+});
+
+const resetBoard = () => {
+    board = ['', '', '', '', '', '', '', '', ''];
+    isGameActive = true;
+    announcer.classList.add('hide');
+
+    if (currentPlayer === 'O') {
+        changePlayer();
+    }
+
+    tiles.forEach(tile => {
+        tile.innerText = '';
+        tile.classList.remove('playerX');
+        tile.classList.remove('playerO');
+    });
+}
+
+resetButton.addEventListener('click', resetBoard);
