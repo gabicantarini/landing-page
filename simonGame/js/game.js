@@ -21,7 +21,11 @@ $(".btn").click(function() {
     var userChosenColour = $(this).attr("id");
       
     userClickedPattern.push(userChosenColour);
-    checkAnswer(currentLevel)
+    userClickedPattern.push(userChosenColour);
+    userClickedPattern.push(userChosenColour);
+
+    
+    //checkAnswer(currentLevel)
     playSound(userChosenColour);
     animatePress(userChosenColour);
   
