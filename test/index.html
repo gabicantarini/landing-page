@@ -1,38 +1,61 @@
-<DOCTYPE html>
-    <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">     
-       
-    </head>
-    <body>
-        <main class="background">
-            <section class="title">
-                <h1>Jogo da Velha</h1>
-            </section>
-            <section class="display">
-                Player <span class="display-player playerX">X</span>'s turn
-            </section>
-            <section class="container">
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-                <div class="tile"></div>
-            </section>
-            <section class="display announcer hide"></section>
-            <section class="controls">
-                <button id="reset">Reset</button>
-            </section>
-        </main>
-           
-            <script type="text/javascript" src="scripts.js"></script>
-    </body>
-    </html>
-    
-    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorjetas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="logo">
+    </header>
+
+    <main class="main">
+
+        <section class="ladoesq">
+            <p id="textos">Bill</p>
+            <input type="number" name="valor" id="input-bill" placeholder=" ">
+
+            <div class="porcentagem">
+                <p id="textos">Select Tip %</p>
+                <input type="button" class="botao" id="botao5" value="5%"
+                    onclick="document.querySelector('#botao5').classList.add('alter')">
+                <button class="botao" id="botao10" value="10" onclick="porcetagem('10%')">10%</button>
+                <button class="botao" id="botao15" value="15" onclick="porcetagem('15%')">15%</button>
+                <br>
+                <button class="botao" id="botao25" value="25" onclick="porcetagem('25%')">25%</button>
+                <button class="botao" id="botao50" value="50" onclick="porcetagem('50%')">50%</button>
+                <button class="botaocusto" id="botaocusto" onclick="insert('Custom')">Custom</button>
+            </div>
+
+            <div class="people">
+                <p id="textos">Number of People<span><!--Can't be zero--></span></p>
+                <input type="number" name="valor" onclick="" id="input-people" placeholder="0">
+            </div>
+        </section>
+
+        <section class="ladodir">
+            <h3 id="txt2">Tip Amount<br><span id="txt3">/person</span></h3>
+            <h2 id="txt4"> $0.00 </h2>
+            <br>
+            <h3 id="txt2">Total<br><span id="txt3">/person</span></h3>
+            <h2 id="txt5"> $0.00 </h2>
+
+            <div class="reset">
+                <input type="button" value="RESET" id="botao-reset" onclick="location.reload()">
+            </div>
+
+
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
