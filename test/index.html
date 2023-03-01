@@ -1,61 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Gorjetas</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-    </style>
+    <title> pagina web arquitetura </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Isadora">
+    <meta name="description" content="web site de arquitetura">
+    <meta name="keywords" content="arquitetura, projetos, interiores, design">
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="images/logo.svg" alt="logo">
-    </header>
 
-    <main class="main">
+    <div id="principal">
+        <header class="top">
+            <nav>
+                <ul class="indice">
+                    <li><a href="index.html"> Início</a></li>
+                    <li><a href="#">Contato</a></li>
 
-        <section class="ladoesq">
-            <p id="textos">Bill</p>
-            <input type="number" name="valor" id="input-bill" placeholder=" ">
+                </ul>
+            </nav>
+            <div class="titulo">
+                <h1>Arquitetura e Interiores</h1>
+            </div>
+        </header>
 
-            <div class="porcentagem">
-                <p id="textos">Select Tip %</p>
-                <input type="button" class="botao" id="botao5" value="5%"
-                    onclick="document.querySelector('#botao5').classList.add('alter')">
-                <button class="botao" id="botao10" value="10" onclick="porcetagem('10%')">10%</button>
-                <button class="botao" id="botao15" value="15" onclick="porcetagem('15%')">15%</button>
-                <br>
-                <button class="botao" id="botao25" value="25" onclick="porcetagem('25%')">25%</button>
-                <button class="botao" id="botao50" value="50" onclick="porcetagem('50%')">50%</button>
-                <button class="botaocusto" id="botaocusto" onclick="insert('Custom')">Custom</button>
+        <main class="container">
+            <div class="menu proj01">
+                <a href="#"><img src="imagens/04.png" alt=""></a>
+                <p>Projeto 01</p>
             </div>
 
-            <div class="people">
-                <p id="textos">Number of People<span><!--Can't be zero--></span></p>
-                <input type="number" name="valor" onclick="" id="input-people" placeholder="0">
-            </div>
-        </section>
-
-        <section class="ladodir">
-            <h3 id="txt2">Tip Amount<br><span id="txt3">/person</span></h3>
-            <h2 id="txt4"> $0.00 </h2>
-            <br>
-            <h3 id="txt2">Total<br><span id="txt3">/person</span></h3>
-            <h2 id="txt5"> $0.00 </h2>
-
-            <div class="reset">
-                <input type="button" value="RESET" id="botao-reset" onclick="location.reload()">
+            <div class="menu proj02">
+                <a href="#"><img src="imagens/09.png" alt=""></a>
+                <p>Projeto 02</p>
             </div>
 
+            <div class="menu proj03">
+                <a href="#"><img src="imagens/07.png" alt=""></a>
+                <p>Projeto 03</p>
+            </div>
+        </main>
+    </div>
 
-        </section>
-    </main>
-    <script src="scripts.js"></script>
 </body>
 
 </html>
