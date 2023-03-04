@@ -1,50 +1,84 @@
-<!doctype html>
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> pagina web arquitetura </title>
-    <meta charset="utf-8">
-    <meta name="author" content="Isadora">
-    <meta name="description" content="web site de arquitetura">
-    <meta name="keywords" content="arquitetura, projetos, interiores, design">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac toe</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="./styles.css">
+ 
 </head>
 
-<body>
+<body >
+    <main>
+        <h1>Tic Tac Toe</h1>
+        <div id="rules">
+            <h2>Rules</h2><p id="rule-modal" onclick="openModal()"> ?</p>
+        </div>
 
-    <div id="principal">
-        <header class="top">
-            <nav>
-                <ul class="indice">
-                    <li><a href="index.html"> Início</a></li>
-                    <li><a href="#">Contato</a></li>
-
-                </ul>
+        <div id="myModal" class="modal">
+            <div class="close" onclick="closeModal()">&times;</div>
+             <div class="modal-content">
+           
+            <nav id="nav" class="nav">
+                <ol>
+                    <li> The game is played on a grid of 3 x 3 squares. </li><br>
+                    <li>  You are Player1 and your friend is Player2. Players take turns placing their marks on empty squares. </li> <br>
+                    <li> The player who manages to form a line with three identical symbols first, whether horizontally, vertically or diagonally, wins. </li><br>
+                    <li> If at the end of the game all squares are filled and no player has 3 marks in a row, it is a tie.</li>
+                </ol>
+                
             </nav>
-            <div class="titulo">
-                <h1>Arquitetura e Interiores</h1>
-            </div>
-        </header>
+        </div>
+        </div>
 
-        <main class="container">
-            <div class="menu proj01">
-                <a href="#"><img src="imagens/04.png" alt=""></a>
-                <p>Projeto 01</p>
-            </div>
+        <div>
+            <p class="changeTheme">Theme</p>
+            <label id="changeT" class="changeT">
+                <input type="checkbox"  id="switch" onclick="changeTheme()">
+                <span class="slider"></span>
+            </label>           
+        </div></div>
 
-            <div class="menu proj02">
-                <a href="#"><img src="imagens/09.png" alt=""></a>
-                <p>Projeto 02</p>
-            </div>
+    
 
-            <div class="menu proj03">
-                <a href="#"><img src="imagens/07.png" alt=""></a>
-                <p>Projeto 03</p>
-            </div>
-        </main>
+       
+    <div id="playerturn">
+        <p>Player's turn:</p> 
+        
+        <img id="img-player-turn" src="" height="8rem">
+      
     </div>
 
-</body>
+        <div id="game">
+            <div id="line">
+                <div class="space" id="space1" move=""></div>
+                <div class="space" id="space2" move=""></div>
+                <div class="space" id="space3" move=""></div>
+            </div>
+            <div id="line">
+                <div class="space" id="space4" move=""></div>
+                <div class="space" id="space5" move=""></div>
+                <div class="space" id="space6" move=""></div>
+            </div>
+            <div id="line">
+                <div class="space" id="space7" move=""></div>
+                <div class="space" id="space8" move=""></div>
+                <div class="space" id="space9" move=""></div>
+            </div>
 
+        </div>
+             
+             <div id="result"></div>
+             <button id="restart" onclick="restart()">Restart</button>
+             
+             
+             
+       
+    </main>
+    <script type="text/javascript" src="./scripts.js"></script>
+    <script type="text/javascript" src="./teste.js"></script>
+</body>
 </html>

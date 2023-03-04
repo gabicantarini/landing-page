@@ -1,32 +1,68 @@
-const resultadopessoa = document.querySelector('#txt4')
-const resultadototal = document.querySelector('#txt5')
-
-const b5 = document.querySelector('#botao5')
-var b10 = document.querySelector('#botao10')
-var b15 = document.querySelector('#botao15')
-var b25 = document.querySelector('#botao20')
-var b50 = document.querySelector('#botao50')
-
-
-function calcularGor5() {
-
-    const valor = document.querySelector('#input-bill');
-    const people = document.querySelector('#input-people');
-
-    if (valor.value !== "" && people.value !== "") {
-
-        valorGorjetaPessoa = ((valor.value / 100) * 5) / people.value;
-        valorTotalpessoa = (valor.value / valor.value) + valorGorjetaPessoa;
-
-        resultadopessoa.innerHTML= `\$ ${valorGorjetaPessoa.toFixed(2)}`;
-        resultadototal.innerHTML= `\$ ${valorTotalpessoa.toFixed(2)}`;
-        console.log(valor.value)
-
-    } else {
-        alert('Preencha todos os campos')
+function openModal() {
+    document.getElementById("myModal").style.display = "block";   //change the original "display none" to "block"
     }
-}
+    
+    // Close the Modal
+    function closeModal() {
+    document.getElementById("myModal").style.display = "none";  //hide again
+    }
 
-b5.addEventListener("click", () => {
-    calcularGor5();
-})
+
+
+    /* WINNER */
+
+     function thereIsAWinner(){
+        var space1 = document.getElementById('space1').getAttribute("move") //it's through the attribute "move" that will be determined who is the winner
+        var space2 = document.getElementById("space2").getAttribute("move")
+        var space3 = document.getElementById('space3').getAttribute("move")
+
+        var space4 = document.getElementById('space4').getAttribute("move")
+        var space5 = document.getElementById('space5').getAttribute("move")
+        var space6 = document.getElementById('space6').getAttribute("move")
+
+        var space7 = document.getElementById('space7').getAttribute("move")
+        var space8 = document.getElementById('space8').getAttribute("move")
+        var space9 = document.getElementById('space9').getAttribute("move")
+
+        if(winner == ""){ 
+
+            if((space1 == player1 && space2 == player1 && space3 == player1) || (space1 == player1  && space4 == player1  && space7 ==player1) ||   (space1 == player1  && space5 == player1  && space9== player1 ) || (space2==player1 && space5==player1 && space8==player1 ) || (space3==player1 && space6==player1 && space9==player1) || (space7==player1 && space8==player1 && space9==player1 )){
+
+        winner = player1;
+        theWinner.textContent = `${winner} wins! 🎉`;
+        theWinner.style.display = "block";
+        gameOver == true;
+        
+        return;
+        
+        
+        
+            }else if((space1 == player2 && space3 == player2 && space2 == player2) || (space1 == player2  && space4 == player2  && space7 == player2) || (space1 == player2  && space5 == player2  && space9 == player2 ) || (space2==player2 && space5==player2 && space8==player2 ) || (space3==player2 && space6==player2 && space9==player2) || (space7==player2 && space8==player2 && space9==player2 )){
+
+            winner = player2;
+            theWinner.textContent = `${winner} wins! 🎉`;
+            theWinner.style.display = "block";
+            gameOver == true;
+            return;
+            
+                    
+            }else if (space1!="" && space2!="" && space3!="" && space4!="" && space5!="" && space6!="" && space7!="" && space8!="" && space9!=""){
+            theWinner.innerHTML = `It's a tie!<br> Nobody wins 😅 `;        
+            gameOver == true;
+            return;
+           
+             }
+        }
+    }
+     
+    
+
+//RESTART BUTTON    
+
+    function restart(){
+          location.reload();
+          theWinner.style.display = "none";
+
+         
+         
+    }
