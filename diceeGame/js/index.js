@@ -1,12 +1,12 @@
 
-var randomNumber1 = Math.floor((Math.random() * 6)) + 1;
-var diceeImages = "images/dice" + randomNumber1 + ".png";
+const randomNumber1 = Math.floor((Math.random() * 6)) + 1;
+const diceeImages = "images/dice" + randomNumber1 + ".png";
 document.querySelector(".img1").setAttribute("src", diceeImages); 
   
 
    
-var randomNumber2 = Math.floor((Math.random() * 6)) + 1;
-var rightDiceeImages = "images/dice" + randomNumber2 + ".png"; 
+const randomNumber2 = Math.floor((Math.random() * 6)) + 1;
+const rightDiceeImages = "images/dice" + randomNumber2 + ".png"; 
 document.querySelector(".img2").setAttribute("src", rightDiceeImages); 
 
 
