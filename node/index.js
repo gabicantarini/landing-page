@@ -1,7 +1,7 @@
-// node practice
+var superheroes = require("superheroes");
 
-const fs = require("fs");
+var mySuperheroName = superheroes.random();
 
-fs.copyFileSync("file1.txt", "file2.txt");
+console.log(mySuperheroName);
 
 
