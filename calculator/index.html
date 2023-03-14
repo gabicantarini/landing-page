@@ -3,52 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="tab icon" href="./img/icon-calculator.gif">
     <title>Calculator</title>
 </head>
 
 <body>
+    <div class="center">
+        <h1>Calculator</h1>
+    </div>
 
-    <h1>Calculator</h1>
-
-    <form action="/" method="post">
+    <div>
         <div class="color">
             <table>
                 <tr>
-                  <td colspan="4"><input type="text" id="result" readonly></td>
+                    <td colspan="4"><input type="text" id="result" readonly></td>
                 </tr>
                 <tr>
-                  <td><button onclick="insertNumber(7)">7</button></td>
-                  <td><button onclick="insertNumber(8)">8</button></td>
-                  <td><button onclick="insertNumber(9)">9</button></td>
-                  <td><button onclick="ingesaroperador('/')">/</button></td>
+                    <td><button onclick="insertNumber(7)">7</button></td>
+                    <td><button onclick="insertNumber(8)">8</button></td>
+                    <td><button onclick="insertNumber(9)">9</button></td>
+                    <td><button onclick="ingesaroperador('/')">/</button></td>
                 </tr>
                 <tr>
-                  <td><button onclick="insertNumber(4)">4</button></td>
-                  <td><button onclick="insertNumber(5)">5</button></td>
-                  <td><button onclick="insertNumber(6)">6</button></td>
-                  <td><button onclick="ingesaroperador('*')">*</button></td>
+                    <td><button onclick="insertNumber(4)">4</button></td>
+                    <td><button onclick="insertNumber(5)">5</button></td>
+                    <td><button onclick="insertNumber(6)">6</button></td>
+                    <td><button onclick="ingesaroperador('*')">*</button></td>
                 </tr>
                 <tr>
-                  <td><button onclick="insertNumber(1)">1</button></td>
-                  <td><button onclick="insertNumber(2)">2</button></td>
-                  <td><button onclick="insertNumber(3)">3</button></td>
-                  <td><button onclick="ingesaroperador('-')">-</button></td>
+                    <td><button onclick="insertNumber(1)">1</button></td>
+                    <td><button onclick="insertNumber(2)">2</button></td>
+                    <td><button onclick="insertNumber(3)">3</button></td>
+                    <td><button onclick="ingesaroperador('-')">-</button></td>
                 </tr>
                 <tr>
-                  <td><button onclick="insertNumber(0)">0</button></td>
-                  <td><button onclick="ingesaroperador('.')">.</button></td>
-                  <td><button onclick="calculate()">=</button></td>
-                  <td><button onclick="ingesaroperador('+')">+</button></td>
+                    <td><button onclick="insertNumber(0)">0</button></td>
+                    <td><button onclick="ingesaroperador('.')">.</button></td>
+                    <td><button onclick="calculate()">=</button></td>
+                    <td><button onclick="ingesaroperador('+')">+</button></td>
                 </tr>
                 <tr>
-                  <td colspan="4"><button onclick="clearAll()">DEL</button></td>
+                    <td colspan="4"><button onclick="clearAll()">RESET</button></td>
                 </tr>
-              </table>
-            </div>
-            <div class="center">
-    </form>
-
+            </table>
+        </div>
+        <div class="center">
+            <p>© 2023 Gabriela Cantarini</p>
+        </div>
+    </div>
+    <script src="./src/calculator.js"></script>
 </body>
 
 </html>

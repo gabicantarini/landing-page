@@ -9,6 +9,32 @@ bodyParser.urlencoded => to get index.html post information to my server
 
 //jshint esversion:6
 
+let calculation = "";
+
+function insertNumber(number) {
+  calculation += number;
+  document.getElementById("result").value = calculation;
+}
+
+function ingesaroperador(operator) {
+  if (calculation.charAt(calculation.length - 1) !== operator) {
+    calculation += operator;
+    document.getElementById("result").value = calculation;
+  }
+}
+
+function calculate() {
+  const result = eval(calculation);
+  document.getElementById("result").value = result;
+  calculation = result.toString();
+}
+
+function clearAll() {
+  calculation = "";
+  document.getElementById("result").value = "";
+}
+
+
 const express = require("express");
 
 const bodyParser = require("body-parser");
@@ -23,11 +49,7 @@ app.get("/", function(req, res){
 
 app.post("/", function(req, res){
 
-let num1 = Number(req.body.num1);
-let num2 = Number(req.body.num2);
-let result = num1 + num2;
-
-    res.send("The result is " + result);
+    res.send();
 });
 
 
