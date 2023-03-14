@@ -1,9 +1,11 @@
+// __dirname = search de directory address at any device or server
+
 const express = require("express");
 
 const app = express();
 
 app.get("/", function(req, res){
-    res.send("Hello World");
+    res.sendFile(__dirname + "/index.html");
 });
 
 
