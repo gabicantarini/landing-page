@@ -16,7 +16,7 @@ function insertNumber(number) {
   document.getElementById("result").value = calculation;
 }
 
-function ingesaroperador(operator) {
+function calcOperator(operator) {
   if (calculation.charAt(calculation.length - 1) !== operator) {
     calculation += operator;
     document.getElementById("result").value = calculation;
