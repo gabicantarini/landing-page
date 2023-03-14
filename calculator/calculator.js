@@ -8,6 +8,9 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/index.html");
 });
 
+app.post("/", function(req, res){
+    res.send("LEGAL!");
+});
 
 app.listen(3000, function(){
     console.log("Listening portal 3000");
