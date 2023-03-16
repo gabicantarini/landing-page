@@ -15,11 +15,8 @@ app.get("/", function(req, res){
         response.on("data", function(data){
 
            const weatherData =  JSON.parse(data)
-           const object = {
-            name: "Gabriela",
-            favouriteColour: "Blue"
-           }
-            console.log(JSON.stringify(object));
+           const temp = weatherData.main.temp;
+            console.log(JSON.stringify(temp));
         });
     });
 
