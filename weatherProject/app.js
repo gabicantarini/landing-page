@@ -16,13 +16,16 @@ app.get("/", function(req, res){
 
            const weatherData =  JSON.parse(data)
            const temp = weatherData.main.temp;
-            console.log(JSON.stringify(temp));
+           const weatherDescription = weatherData.weather[0].description;
+           res.send("The temperature in London is " + tempo + "degrees Ceclcius.")
+            
+           console.log(JSON.stringify(temp));
         });
     });
 
 
     
-    res.send("Server is running");
+    //res.send("Server is running"); //We can only use one send method at once
 });
 
 app.listen(3000, function(){
