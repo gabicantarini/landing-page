@@ -17,8 +17,9 @@ app.get("/", function(req, res){
            const weatherData =  JSON.parse(data)
            const temp = weatherData.main.temp;
            const weatherDescription = weatherData.weather[0].description;
-           res.send("The temperature in London is " + tempo + "degrees Ceclcius.")
-            
+           res.write("<h1>The weather is currently " + weatherDescription + "  </h1>");
+           res.write("<h1>The temperature in London is " + temp + " degrees Ceclcius.<h1>")
+           res.send(); 
            console.log(JSON.stringify(temp));
         });
     });
