@@ -2,9 +2,11 @@ const express = require("express");
 const https = require("https");
 const { dirname } = require("path");
 
+const bodyParser = require("body-parser");
+
 const app = express();
 
-
+app.use(bodyParser.urlencoded)
 
 app.get("/", function(req, res){
 
@@ -14,7 +16,7 @@ app.get("/", function(req, res){
 });
 
 app.post("/", function(req, res) {
-    console.log("Post request received");
+    console.log(req.body.cityName);
 })
 
     /* 
