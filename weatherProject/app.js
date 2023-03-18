@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.use(bodyParser.urlencoded)
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res){
 
@@ -16,14 +16,11 @@ app.get("/", function(req, res){
 });
 
 app.post("/", function(req, res) {
-    console.log(req.body.cityName);
-})
-
-    /* 
-    const query = "London";
+  
+        
+    const query = req.body.cityName;
     const apiKey = "34acc4e89b63d7659564bbd63bf03c66";
     const unit = "metric";
-
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=" + unit;
     
     https.get(url, function(response){
@@ -31,22 +28,26 @@ app.post("/", function(req, res) {
 
         response.on("data", function(data){
 
-
-           console.log(JSON.stringify(temp));
+            const weatherData =  JSON.parse(data)
+            const temp = weatherData.main.temp;
+            const weatherDescription = weatherData.weather[0].description;
+            const icon = weatherData.weather[0].icon;
+            const imageURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+            res.write("<h1>The weather is currently " + weatherDescription + "  </h1>");
+            res.write("<h1>The temperature in " + query + " is " + temp + " degrees Ceclcius.<h1>");
+            res.write("<img src=" + imageURL + ">");
+            res.send(); 
         });
     });
 
-    const weatherData =  JSON.parse(data)
-    const temp = weatherData.main.temp;
-    const weatherDescription = weatherData.weather[0].description;
-    const icon = weatherData.weather[0].icon;
-    const imageURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-    res.write("<h1>The weather is currently " + weatherDescription + "  </h1>");
-    res.write("<h1>The temperature in London is " + temp + " degrees Ceclcius.<h1>");
-    res.write("<img src=" + imageURL + ">");
-    res.send(); 
 
-    */
+
+   
+
+
+});
+
+
     
 
     //res.send("Server is running"); //We can only use one send method at once
