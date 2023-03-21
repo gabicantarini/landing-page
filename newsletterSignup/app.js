@@ -13,37 +13,51 @@ app.get("/", function (req, res) {
     res.sendFile(__dirname + "/signup.html");
 });
 
+const apiKey = "9c47097a450fc9dbc11d04e01306da95-us21";
+const server = "us21";
+const audienceId = "fc788a18d5";
+
+
 app.post("/", function (req, res) {
 
-    const firstName = req.body.firstName;
-    const lastName = req.body.lastName;
+    const firstName = req.body.fname;
+    const lastName = req.body.lname;
     const email = req.body.email;
 
-    const data = {
-        members: [
-            {
-                //id: "string",
-                email_address: email,                
-                status: "subscribed",                
-                merge_fields: {
-                    FNAME: firstName,
-                    LNAME: lastName
-                }
-            }
-        ]
+    
+    //console.log(firstName, lastName, email);
 
-    };
+    const client = require("@mailchimp/mailchimp_marketing");
 
-    const jsonData = JSON.stringify(data);
+    client.setConfig({
+      apiKey: apiKey,
+      server: server,
+    });
+  
+    
 
-    const url = "https://mandrillapp.com/api/1.0/users/ping" 
 
-    https.request(url, options, function(response){
-        
-    })
 
-    console.log(firstName, lastName, email);
+  const run = async () => {
+    const response = await client.lists.batchListMembers(audienceId, {
+      members: [
+        {
+          email_address: email,
+          status: "subscribed",
+          merge_fields: {
+            FNAME: firstName,
+            LNAME: lastName,
+          }
+        }
+      ]
+    });
+    console.log(response);
+  };
+  run();
+
 });
+
+
 
 app.listen(3000, function () {
     console.log("Server is running on port 3000");
