@@ -36,6 +36,8 @@ app.post("/", function (req, res) {
 
     const jsonData = JSON.stringify(data);
 
+    const url = "https://mandrillapp.com/api/1.0/users/ping" 
+
     https.request(url, options, function(response){
         
     })
@@ -55,3 +57,6 @@ app.listen(3000, function () {
 //fc788a18d5
 
 //const jsonData = JSON.stringify(data) => pass data as json format
+
+
+
