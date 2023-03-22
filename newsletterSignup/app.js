@@ -3,6 +3,7 @@ const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
 const request = require("request");
+const { dirname } = require("path");
 
 const app = express();
 
@@ -13,15 +14,17 @@ app.get("/", function (req, res) {
     res.sendFile(__dirname + "/signup.html");
 });
 
-const apiKey = "9c47097a450fc9dbc11d04e01306da95-us21";
-const server = "us21";
-const audienceId = "fc788a18d5";
+
 
 
 app.post("/", function (req, res) {
 
-    const firstName = req.body.fname;
-    const lastName = req.body.lname;
+    const apiKey = "9b778aa07ffd1d0f1ad0fccb4daafc16-us21";
+    const server = "us21";
+    const audienceId = "fc788a18d5";
+
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
     const email = req.body.email;
 
     
@@ -38,7 +41,7 @@ app.post("/", function (req, res) {
 
 
 
-  const run = async () => {
+ const run = async () => {
     const response = await client.lists.batchListMembers(audienceId, {
       members: [
         {
@@ -47,11 +50,20 @@ app.post("/", function (req, res) {
           merge_fields: {
             FNAME: firstName,
             LNAME: lastName,
-          }
-        }
-      ]
+          },
+        },
+      ],
     });
-    console.log(response);
+
+     if(response.statusCode===200) {
+         res.send(dirname + "Successfully subscribed!");
+     } else {
+         res.send(dirname + "There was an error with signing up, please try again!");
+     }
+
+     console.log(response);
+     const jsonData = JSON.stringify(response);
+    
   };
   run();
 
