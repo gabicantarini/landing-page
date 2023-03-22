@@ -1,8 +1,8 @@
 
 const express = require("express");
-const https = require("https");
+//const https = require("https");
 const bodyParser = require("body-parser");
-const request = require("request");
+//const request = require("request");
 const { dirname } = require("path");
 
 const app = express();
@@ -10,18 +10,16 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true })); // get html body information
 app.use(express.static("public")); // refer to our static files
 
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
     res.sendFile(__dirname + "/signup.html");
 });
 
+const apiKey = "b951f97577aa6f7d301d796b93dcc7c8-us21";
+const server = "us21";
+const audienceId = "fc788a18d5";
 
 
-
-app.post("/", function (req, res) {
-
-    const apiKey = "9b778aa07ffd1d0f1ad0fccb4daafc16-us21";
-    const server = "us21";
-    const audienceId = "fc788a18d5";
+app.post("/", (req, res) => {
 
     const firstName = req.body.firstName;
     const lastName = req.body.lastName;
@@ -36,10 +34,7 @@ app.post("/", function (req, res) {
       apiKey: apiKey,
       server: server,
     });
-  
     
-
-
 
  const run = async () => {
     const response = await client.lists.batchListMembers(audienceId, {
@@ -55,19 +50,26 @@ app.post("/", function (req, res) {
       ],
     });
 
-     if(response.statusCode===200) {
-         res.send(dirname + "Successfully subscribed!");
-     } else {
-         res.send(dirname + "There was an error with signing up, please try again!");
-     }
+    
 
-     console.log(response);
-     const jsonData = JSON.stringify(response);
+    if (!response.client) {
+      res.sendFile(dirname + "/success.html");
+    } else {
+      res.sendFile(__dirname + "/failure.html");
+    }
+
+    console.log(response);
+
     
   };
   run();
 
 });
+
+app.post("/failure", (req, res) => {
+  res.redirect("/");
+}); 
+
 
 
 
