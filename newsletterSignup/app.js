@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/signup.html");
 });
 
-const apiKey = "b951f97577aa6f7d301d796b93dcc7c8-us21";
+const apiKey = "24f6f41a31d6466b6e319b432466730a-us21";
 const server = "us21";
 const audienceId = "fc788a18d5";
 
@@ -37,29 +37,27 @@ app.post("/", (req, res) => {
     
 
  const run = async () => {
-    const response = await client.lists.batchListMembers(audienceId, {
-      members: [
-        {
-          email_address: email,
-          status: "subscribed",
-          merge_fields: {
-            FNAME: firstName,
-            LNAME: lastName,
-          },
-        },
-      ],
+    const response = await client.lists.addListMember(audienceId, {
+     
+      email_address: email,
+      status: "subscribed",
+      merge_fields: {
+        FNAME: firstName,
+        LNAME: lastName
+      },
+   
     });
 
     
 
-    if (!response.client) {
+    if (response.statusCode === 200) {
       res.sendFile(dirname + "/success.html");
     } else {
       res.sendFile(__dirname + "/failure.html");
     }
 
     console.log(response);
-
+    console.log(response.merge_fields);
     
   };
   run();
@@ -85,6 +83,5 @@ app.listen(3000, function () {
 //fc788a18d5
 
 //const jsonData = JSON.stringify(data) => pass data as json format
-
 
 
