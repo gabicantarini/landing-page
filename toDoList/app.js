@@ -3,11 +3,23 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-app.express();
+const app = express();
 
 app.get("/", (req, res) => {
-    res.send("Hello!");
+    const today = new Date();
+
+    if(today.getDay() === 6 || today.getDay() === 0) {
+        res.send("Yay it's the weekend!");
+    } else {
+        res.send("Boo! I have to work!");
+    }
 });
+
+
+
+
+
+
 
 app.listen(3000, () => {
     console.log("Server started on portal 3000.");
