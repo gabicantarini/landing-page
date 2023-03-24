@@ -30,7 +30,7 @@
 
 ## Related Projects <a name="#id03"></a>
 - [landing-page](#id)
-    *[Dicee Game](#id)
+    -- [Dicee Game](#id)
     *[Tin Dog Site](#id)
     *[Drum Kit](#id)
 - [Simon Game](#id)
