@@ -50,15 +50,14 @@ app.post("/", (req, res) => {
 
     
 
-    if (response.statusCode === 200) {
-      res.sendFile(dirname + "/success.html");
+    if (!response.statusCode) {
+      res.sendFile(__dirname + "/success.html");
     } else {
       res.sendFile(__dirname + "/failure.html");
     }
 
     console.log(response);
     console.log(response.merge_fields);
-    
   };
   run();
 
