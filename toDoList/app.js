@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+app.use("view engine", "ejs");
+
 app.get("/", (req, res) => {
     const today = new Date();
 
@@ -20,3 +22,4 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
     console.log("Server started on portal 3000.");
 });
+
