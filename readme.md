@@ -1,5 +1,4 @@
 
-
 # Index
 
 - [Introduction](#id01)
@@ -30,10 +29,13 @@
 
 
 ## Related Projects <a name="#id03"></a>
-- [Introduction]
-- [Technologies]
-- [Requirements]
-- [Author]
+- [landing-page](#id)
+    -[Dicee Game](#id)
+    -[Tin Dog Site](#id)
+    -[Drum Kit](#id)
+- [Simon Game](#id)
+- [To do List](#id)
+- [Calculator](#id)
 
 
 # Requirements <a name="id04"></a>
@@ -41,9 +43,9 @@
 
 <br />
 
-- [x] Editor de código de sua preferência (recomendado VS code)
+- [x] Code editor as your preference (I recommend VS code)
 - [x] Git
-- [x] Gerenciador de pacotes Yarn ou NPM
+- [x] Package management Yarn or NPM
 
 <br />
 
