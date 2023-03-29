@@ -14,16 +14,21 @@
    
     <div class="box">
         <% for(let i=0; i<tasks.length; i++) { %>
-            <li><%= tasks[i] %></li>
+        <div class="item">
+            <input type="checkbox">
+            <p><%= tasks[i] %></p>
+        </div>
         <% } %>
+
+        <form class="item" acction="/" method="post">
+            <label for="newItem">Add New Task</label>
+            <input type="text" name="newItem" id="newItem">
+            <button type="submit">Add</button>
+        </form>
 
     </div>
 
-    <form acction="/" method="post">
-        <label for="newItem">Add New Task</label>
-        <input type="text" name="newItem" id="newItem">
-        <button type="submit">Add</button>
-    </form>
+
    
 </body>
 </html>
