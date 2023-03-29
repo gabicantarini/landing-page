@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
     const day = today.toLocaleDateString("en-US", options);   
 
-    res.render("lists", {kindOfDay: day, tasks: task});
+    res.render("lists", {kindOfDay: day, tasks: tasks});
 
 });
 
