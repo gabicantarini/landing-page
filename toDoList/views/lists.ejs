@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>To Do List</title>
 </head>
 <body>
-   
-    <h1>It's a <%= kindOfDay %> !</h1>
 
-    <ul>
+    <div class="box" id="heading">
+        <h1>It's a <%= kindOfDay %> !</h1>
+    </div>
+   
+    <div class="box">
         <% for(let i=0; i<tasks.length; i++) { %>
             <li><%= tasks[i] %></li>
         <% } %>
-    </ul>
+
+    </div>
 
     <form acction="/" method="post">
         <label for="newItem">Add New Task</label>
