@@ -24,7 +24,13 @@ app.get("/", (req, res) => {
 
 });
 
+const tasks = [];
 
+app.post("/", (req, res) => {
+    const tasks = req.body.newItem;
+    tasks.push(task);
+    res.redirect("/");
+})
 
 
 
