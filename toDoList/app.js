@@ -20,14 +20,14 @@ app.get("/", (req, res) => {
 
     const day = today.toLocaleDateString("en-US", options);   
 
-    res.render("lists", {kindOfDay: day, tasks: tasks});
+    res.render("lists", {kindOfDay: day, tasks: task});
 
 });
 
 const tasks = [];
 
 app.post("/", (req, res) => {
-    const tasks = req.body.newItem;
+    const task = req.body.newItem;
     tasks.push(task);
     res.redirect("/");
 })
