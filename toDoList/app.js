@@ -5,6 +5,9 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const tasks = [];
+const workTasks = [];
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
@@ -22,28 +25,28 @@ app.get("/", (req, res) => {
 
     const day = today.toLocaleDateString("en-US", options);   
 
-    res.render("lists", {listTitle: day, tasks: tasks});
+    res.render("lists", {listTitle: day, newTaskList: tasks});
 
 });
 
-const tasks = [];
-const workTasks = [];
-
 app.post("/", (req, res) => {
-    const task = req.body.newItem;
-    tasks.push(task);
-    res.redirect("/");
-})
+       
+    let task = req.body.newItem;
+    let list = req.body.list;
+    
+    if (list === "Work") {
+        workTasks.push(task);
+        res.redirect("/work");
+    } else {
+        tasks.push(task);
+        res.redirect("/");
+    }
+
+});
 
 app.get("/work", (req, res) => {
-    res.render("lists", { listTitle: "Work List", tasks: workTasks });
-})
-
-app.post("/work", (req, res) => {
-    const tasks = req.body.newItem;
-    workTasks.push(tasks);
-    res.redirect("/work");
-})
+    res.render("lists", {listTitle: "Work List", newTaskList: workTasks});
+});
 
 
 app.listen(3000, () => {

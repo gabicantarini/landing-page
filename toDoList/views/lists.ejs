@@ -13,16 +13,16 @@
     </div>
    
     <div class="box">
-        <% for(let i=0; i<tasks.length; i++) { %>
+        <% for(let i=0; i<newTaskList.length; i++) { %>
         <div class="item">
             <input type="checkbox">
-            <p><%= tasks[i] %></p>
+            <p><%= newTaskList[i] %></p>
         </div>
         <% } %>
 
         <form class="item" acction="/" method="post">
             <input type="text" name="newItem" id="newItem" placeholder="New Task" autocomplete="off">
-            <button type="submit" name="list" value=<%= listTitle %> >+</button>
+            <button type="submit" name="list" value= <%= listTitle %> >+</button>
         </form>
 
     </div>
