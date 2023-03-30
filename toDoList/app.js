@@ -29,23 +29,30 @@ app.get("/", (req, res) => {
 
 });
 
+
+
 app.post("/", (req, res) => {
        
     let task = req.body.newItem;
-    let list = req.body.list;
+    //let list = req.body.list;
     
-    if (list === "Work") {
-        workTasks.push(task);
-        res.redirect("/work");
-    } else {
-        tasks.push(task);
-        res.redirect("/");
-    }
+    tasks.push(task);
+    res.redirect("/");   
 
 });
 
 app.get("/work", (req, res) => {
     res.render("lists", {listTitle: "Work List", newTaskList: workTasks});
+});
+
+app.post("/work", (req, res) => {
+       
+    let task = req.body.newItem;
+    //let list = req.body.list;
+
+    workTasks.push(task);
+    res.redirect("/work");
+  
 });
 
 
