@@ -11,7 +11,17 @@ const fetchPokemon = () => {
 
     Promise.all(pokemonPrmoises) //return a promise after resolve all the pokemonPrmoises
         .then( pokemons => {
-            console.log("pokemons: ", pokemons);
+            //console.log("pokemons: ", pokemons);
+
+            const lisPokemons = pokemons.reduce((acumulator, pokemon) => {
+                acumulator += `
+                <li class="card">
+                <h2 class="card-title>${pokemon.id}. ${pokemon.name}</h2>
+                </li>`
+                return acumulator;
+            }, '')
+
+            console.log("Lis: ", lisPokemons);
         })
 
     /*fetch(url) //bring url from api - return promise 
