@@ -11,25 +11,23 @@ const fetchPokemon = () => {
 
     Promise.all(pokemonPrmoises) //return a promise after resolve all the pokemonPrmoises
         .then( pokemons => {
-            //console.log("pokemons: ", pokemons);
 
             const lisPokemons = pokemons.reduce((acumulator, pokemon) => {
+               const types =  pokemon.types.map(typeInfo => typeInfo.type.name);
+                
                 acumulator += `
                 <li class="card">
+                <img class="card-image ${types[0]}" alt="${pokemon.name}" src="https://pokers.bastionbot.org/images/pokemon/${pokemon.id}.png"/>
                 <h2 class="card-title>${pokemon.id}. ${pokemon.name}</h2>
-                <p class="card-subtitle>${pokemon.types.map(typeInfo => typeInfo.type.name).join(' | ')}</p>
+                <p class="card-subtitle>${types.join(' | ')}</p>
                 </li>`
                 return acumulator;
             }, '')
 
-            console.log("Lis: ", lisPokemons);
+            const ul = document.querySelector('[data-js="pokedex"]');
+            ul.innerHTML = lisPokemons;
         })
 
-    /*fetch(url) //bring url from api - return promise 
-        .then(response => response.json()) //return json response promise
-        .then(pokemon => {
-        console.log(pokemon)
-    })*/
 }
 
 fetchPokemon();
