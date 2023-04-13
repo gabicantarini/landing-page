@@ -35,14 +35,13 @@ h1 {
 .card::after {
     content: "";
     display: block;
-    width: 50%;
-    height: 45%;
-    border-radius: 100%;
-    background-color: #fff; /*rgba(255, 255, 255, 0);*/
+    width: 80%;
+    height: 85%;
+    border-radius: 10%;
+    background-color: #fff;
     opacity: .7;
     position: absolute;
-    top: 15%;
-    left: 25%;
+    top: 8%;
 }
 
 .steel {
