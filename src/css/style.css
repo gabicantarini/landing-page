@@ -11,7 +11,34 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	padding:0pt;
 	vertical-align:baseline;
 }
+table {
+	border-collapse:separate;
+	border-spacing:0pt;
+}
+caption, th, td {
+	font-weight:normal;
+	text-align:left;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content:"";
+}
 
+blockquote, q {
+	quotes:"" "";
+}
+
+strong, b {
+	font-weight:bold;
+}
+
+em, i {
+	font-style:italic;
+}
+
+* {
+	margin:0pt;
+	padding:0pt;
+}
 
 body {
 	background:#151d30;
