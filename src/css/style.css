@@ -43,8 +43,7 @@ em, i {
 body {
 	background:#151d30;
 	font-size:12px;
-	font-family:arial, sans-serif;
-	
+	font-family:arial, sans-serif;	
 }
 
 a {
@@ -129,6 +128,17 @@ h1 a span{
 	text-decoration:none;
 }
 
+#menu ul li a:hover{
+	color:#fff;	
+}
+
+#menu ul li.selected a{
+	color:#fffdbf;
+	background:url(images/menuhover.png) repeat;	
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+
+}
 
 
 #inside-top {
