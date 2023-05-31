@@ -60,7 +60,38 @@ a:hover {
 #top {
 	height:220px;
 	display:none;
-}#inside-top {
+}
+
+#inside-top {
 	margin:0 auto;
 	width:840px;
+}
+
+h1{
+	margin:43px 0 0 0px;
+	padding:0px 0 0 70px;
+	background:url(images/logo.png) left top no-repeat;
+	font-size:60px;
+	font-weight:bold;
+	font-family:"myriad pro";
+	color:#fff;
+}
+
+h1 a{
+	color:#fff;
+	display:block;
+}
+
+h1 a:hover{
+	color:#fff;
+}
+
+h1 a span{
+	font-size:16px;
+	font-weight:bold;
+	color:#cfe7f1;
+	display:block;
+	text-transform:uppercase;
+	font-weight:normal;
+	position:absolute;
 }
