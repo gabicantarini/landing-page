@@ -137,9 +137,34 @@ h1 a span{
 	background:url(src/img/menuhover.png) repeat;	
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
-
 }
 
+#container {
+	width:636px;
+}
+
+#container img{
+	padding:0px 15px 15px 0px;
+}
+
+.sidebar {
+	width:295px;	
+	float:right;
+	padding:0px 0 0 0px;
+}
+
+.sidebar img{
+	margin:0px 7px 15px 0px;
+}
+
+#footer .sidebar img{
+	width:140px;
+	height:141px;
+}
+
+.sidebar img.noright{
+	margin-right:0px;
+}
 
 #inside-top {
 	margin:0 auto;
