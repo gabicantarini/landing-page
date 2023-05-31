@@ -1,0 +1,39 @@
+html, body, div, h1, h2, h3, h4, h5, h6, a, p {
+	border:0pt none;
+	font-family:inherit;
+	font-size:100%;
+	font-style:inherit;
+	font-weight:inherit;
+	margin:0pt;
+	outline-color:invert;
+	outline-style:none;
+	outline-width:0pt;
+	padding:0pt;
+	vertical-align:baseline;
+}
+
+
+body {
+	background:#151d30;
+	font-size:12px;
+	font-family:arial, sans-serif;
+	
+}
+
+a {
+	color:#fefefe;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#fefefe;
+	text-decoration:none;
+}
+
+#top {
+	height:220px;
+	display:none;
+}#inside-top {
+	margin:0 auto;
+	width:840px;
+}
