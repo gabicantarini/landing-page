@@ -22,19 +22,15 @@ caption, th, td {
 blockquote:before, blockquote:after, q:before, q:after {
 	content:"";
 }
-
 blockquote, q {
 	quotes:"" "";
 }
-
 strong, b {
 	font-weight:bold;
 }
-
 em, i {
 	font-style:italic;
 }
-
 * {
 	margin:0pt;
 	padding:0pt;
@@ -43,7 +39,8 @@ em, i {
 body {
 	background:#151d30;
 	font-size:12px;
-	font-family:arial, sans-serif;	
+	font-family:arial, sans-serif;
+	
 }
 
 a {
@@ -54,6 +51,29 @@ a {
 a:hover {
 	color:#fefefe;
 	text-decoration:none;
+}
+
+#top {
+	height:220px;
+	display:none;
+}
+
+#wrapper {
+	width:100%;
+	background:url(images/headerbg.jpg) center top no-repeat;
+	margin:-4px 0 0 0;
+}
+
+.content {
+	width:940px;
+	margin:0px auto;	
+	
+}
+
+#header {
+	padding:35px 0px 35px 0px;
+	color:#fff;
+	
 }
 
 h1{
@@ -74,7 +94,6 @@ h1 a{
 h1 a:hover{
 	color:#fff;
 }
-
 h1 a span{
 	font-size:16px;
 	font-weight:bold;
@@ -83,29 +102,6 @@ h1 a span{
 	text-transform:uppercase;
 	font-weight:normal;
 	position:absolute;
-}
-
-#top {
-	height:220px;
-	display:none;
-}
-
-#wrapper {
-	width:100%;
-	background:url(src/img/headerbg.jpg) center top no-repeat;
-	margin:-4px 0 0 0;
-}
-
-.content {
-	width:940px;
-	margin:0px auto;	
-	
-}
-
-#header {
-	padding:35px 0px 35px 0px;
-	color:#fff;
-	
 }
 
 #menu ul {
@@ -137,6 +133,7 @@ h1 a span{
 	background:url(src/img/menuhover.png) repeat;	
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
+
 }
 
 #container {
@@ -166,9 +163,89 @@ h1 a span{
 	margin-right:0px;
 }
 
-#inside-top {
+#footer {
+	background:url(src/img/footerline.jpg) left top repeat-x #0e1424;
+	clear:both;
+		margin:20px 0 0px 0;
+}
+
+#footer .content {
+	background:url(src/img/footer.jpg) center top no-repeat #0e1424;
+	padding:30px 0 115px 0;
+}
+
+h3 {
+	font-size:16px;
+	color:#fefefe;
+	padding:0 0 10px 0;
+}
+
+#footer p {
+ 	font-size:15px;
+	color:#fefefe;
+	padding:5px 0;
+}
+
+#footer p a:hover{
+ 	text-decoration:underline;
+	color:#fefefe;
+	
+}
+
+#left {
+	float:left;
+	width:200px;
+	padding:0 100px 0 0;
+}
+
+h4 {
+	font-family:"Myriad Pro";
+	font-size:30px;
+	font-weight:bold;
+	color:#fffdbf;
+	padding:40px 0 12px 0;
+}
+
+#top {
+	background:#152e46;
+}
+#top p {
+	font-size:16px;
+	font-family:Arial;
+	color:#97b6d3;
+	line-height:22px;
+	padding:0 0 10px 0;
+}
+
+h5 {
+	display:inline-block;
+	padding:17px 0;
+	font-family:"Myriad Pro";
+	font-weight:bold;
+}
+
+h5 a{
+	margin:0px 25px 0px 0px;
+	color:#fffdbf;
+	font-size:22px;
+
+}
+
+h5 a:hover{
+	text-decoration:underline;
+	color:#fffdbf;
+
+}
+
+#insidetop {
 	margin:0 auto;
 	width:840px;
+}
+
+#topline {
+	clear:both;
+	background:url(src/img/atop.png) left top repeat-x;
+	height:44px;
 }
 
 #topline .content {
@@ -179,11 +256,27 @@ h1 a span{
 	display:inline-block;
 	width:204px;
 	height:34px;
-	background:url(images/network.png) left top no-repeat;
+	background:url(src/img/network.png) left top no-repeat;
 	text-align:center;
 	cursor:pointer;
 	padding:10px 0 0 0;
 	font-family:Georgia, "Times New Roman", Times, serif;
 	font-size:12px;
 	text-transform:uppercase;
+}
+
+#footer .content a span.leftp {
+	font-size:11px;
+	color:#41536a;
+	float:left;
+	text-transform:uppercase;
+	margin:90px 0 15px 0;
+}
+
+#footer .content a span.rightp {
+	font-size:11px;
+	color:#41536a;
+	float:right;
+	text-transform:uppercase;
+	margin:90px 0 15px 0;
 }
